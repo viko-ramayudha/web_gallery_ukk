@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    container: 10px;
+    
+}
+
+body {
+    font-family: Arial, sans-serif;
+    
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.7rem;
+    position: fixed; /* Add this line to fix the navbar on top */
+    top: 0; /* Set the top position to 0 */
+    width: 100%; /* Make sure the navbar spans the entire width */
+    
+    background-color: #fff; /* Set the background color */
+    z-index: 10; /* Add a z-index to make sure the navbar is always on top */
+    /* background-color: #ceb39b; */
+    /* background-color: #f1ebf8; */
+}
+
+.logo {
+    font-weight: bold; 
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin-right: 15px;
+}
+
+.ben {
+   padding: 0.7rem 1rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-size: 20px; 
+    font-weight: bold;
+    color: white;
+    /* text-shadow: 0.1px 0.1px 0.1px black; */
+}
+
+.nav-links a:hover{
+    color: #eabe1f;
+}
+
+.butlog {
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #eabe1f;
+    border-radius: 10px;
+    border: 2px solid #eabe1f;
+    font-size: 20px;
+    padding: 9.5px 19px;
+    text-shadow: 0.1px 0.1px 0.1px black;
+
+    margin-right: 10px;
+}
+
+.butlog a {
+    color: white;
+}
+
+.butlog:hover{
+    background-color: #9564da;
+    color: #fff;
+}
+
+.butlog a:hover{
+    color: #eabe1f;
+}
+
+.toggle-button {
+    display: none;
+}
+
+.butlogout {
+    font-size: 20px;
+    font-weight: bold;
+    background-color:  #9564da;
+    border-radius: 10px;
+    border: 2px solid #eabe1f;
+    font-size: 20px;
+    padding: 9px 13px;
+    text-shadow: 0.1px 0.1px 0.1px black;
+    color: #eabe1f;
+    /* padding: 0.6rem 0.8rem; */
+
+    margin-right: 10px;
+    margin-left: 13px;
+}
+
+.butlogout:hover {
+    background-color: #eabe1f;
+    color: #fff;
+}
+
+.butlogout a {
+    color: #eabe1f;
+}
+
+.butlogout a:hover {
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .toggle-button {
+        display: block;
+        background-color: #fff;
+        border: none;
+        cursor: pointer;
+        padding: 0.5rem;
+    }
+
+    .toggle-button .bar {
+        display: block;
+        width: 2rem;
+        height: 0.2rem;
+        background-color: #333;
+        margin: 0.5rem 0;
+        border-radius: 1rem;
+    }
+
+    .navbar.open .nav-links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #6c45a2;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem;
+        border-top: 1px solid #ddd;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .navbar.open .nav-links li {
+        padding: 1rem;
+    }
+
+    .navbar.open .nav-links a {
+        color: #eabe1f;
+    }
+}
